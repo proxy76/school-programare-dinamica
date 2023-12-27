@@ -9,6 +9,10 @@
     .prob--title {
         font-size: 3.7em;
         font-weight: 500;
+
+        position: sticky;
+        top: 30%;
+        overflow: hidden;
     }
 
     .prob--list {
