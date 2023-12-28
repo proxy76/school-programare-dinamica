@@ -14,8 +14,8 @@ export default function Problems(props) {
     })
 
     const opacity = useTransform(scrollYProgress,
-        [0, 0.2, 0.3, 0.5],
-        [0, 0, 0.8, 1])
+        [0, 0.2, 0.3, 0.5, 0.7, 1],
+        [0, 0, 0.8, 1, 0.8, 0])
     const scale = useTransform(scrollYProgress,
         [0.1, 0.3, 0.5],
         [0.5, 0.8, 1])
@@ -31,8 +31,7 @@ export default function Problems(props) {
                 </motion.div>
 
                 <motion.div 
-                ref={ref}
-                style={{opacity}}>
+                ref={ref}>
                     <List />
                 </motion.div>
             </div>

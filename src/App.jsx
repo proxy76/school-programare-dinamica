@@ -3,6 +3,7 @@ import MainTitle from './components/MainTitle';
 import Problems from './components/Problems';
 
 import './App.css'
+import { useState } from 'react';
 
 function App() {
 
@@ -14,11 +15,11 @@ function App() {
   })
 
   return (
-    <>
+    <div className="App">
      <Header />
      <MainTitle />
      <Problems />
-    </>
+    </div>
   )
 }
 

@@ -1,10 +1,12 @@
 import '../styles/Problems.scss'
 import list from '../assets/data.jsx'
+import '../App.css'
 
 import Problem1 from './Problem1.jsx';
 import Problem2 from './Problem2.jsx';
 import Problem3 from './Problem3.jsx';
 import Problem4 from './Problem4.jsx';
+import BlankProblem from './BlankProblem.jsx';
 
 import { motion } from 'framer-motion'
 import { useState } from 'react';
@@ -30,6 +32,11 @@ export default function List() {
 
     function handleClick(index) {
         setProblem(index)
+        if (problem != 10) 
+        {
+            const el = document.querySelector(".App")
+            
+        }
     } 
 
     return (
@@ -53,13 +60,23 @@ export default function List() {
                 })}
             </div>
 
-            <div className="hero--container">
-                {problem === 0 && <Problem1 />}
-                {problem === 1 && <Problem2 />}
-                {problem === 2 && <Problem3 />}
-                {problem === 3 && <Problem4 />}
-            </div>
+            <>
+                {
+                    problem === 10 &&
+                    <BlankProblem />
+                }
+
+                {
+                    (problem != 10) &&
+                        <div className="hero-container">  
+                            {problem === 0 && <Problem1 />}
+                            {problem === 1 && <Problem2 />}
+                            {problem === 2 && <Problem3 />}
+                            {problem === 3 && <Problem4 />}
+                        </div>
+                }
                 
+            </>
         </>
     )
     
