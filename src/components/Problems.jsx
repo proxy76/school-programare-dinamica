@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import List from './List'
 
+
 export default function Problems(props) {
 
 
@@ -31,8 +32,7 @@ export default function Problems(props) {
 
                 <motion.div 
                 ref={ref}
-                style={{opacity}}
-                className="prob--list">
+                style={{opacity}}>
                     <List />
                 </motion.div>
             </div>

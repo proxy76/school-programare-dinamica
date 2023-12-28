@@ -15,7 +15,6 @@ export default function MainTitle() {
         return "fixed"
     })
 
-
     return (
         <>
             <div className="main">
