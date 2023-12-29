@@ -14,7 +14,7 @@ export default [
     {
         id: 3,
         title: "Date de intrare",
-        text: "pe prima linie două numere naturale N și M, despărțite printr-un spațiu cu semnificația din enunț;\npe următoarele M linii, câte N numere naturale p[i,1], p[i,2], … , p[i,n], separate prin câte un spațiu. Valorile de pe linia i+1, reprezintă în ordine, prețurile stabilite de operatorul numerotat cu i pentru achiziționarea tichetelor de călătorie între localitățile 1 și 2, 2 și 3, …, N-1 și N, respectiv N și 1.",
+        text: "Pe prima linie două numere naturale N și M, despărțite printr-un spațiu cu semnificația din enunț;\npe următoarele M linii, câte N numere naturale p[i,1], p[i,2], … , p[i,n], separate prin câte un spațiu. Valorile de pe linia i+1, reprezintă în ordine, prețurile stabilite de operatorul numerotat cu i pentru achiziționarea tichetelor de călătorie între localitățile 1 și 2, 2 și 3, …, N-1 și N, respectiv N și 1.",
         optTitle: "Date de ieșire",
         optText: "Fişierul de ieşire insula.out va conţine pe prima linie un singur număr natural ce reprezintă suma minimă cu care Ștefan poate achiziționa cele N tichete pentru călătoria sa."
     },

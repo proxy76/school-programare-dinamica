@@ -10,6 +10,9 @@ export default function Problem1() {
     const [width, setWidth] = useState(0)
     const target = useRef();
 
+    useEffect(() => {
+        setWidth(target.current.offsetWidth)
+    }, [])
 
     return(
         <>
@@ -18,7 +21,7 @@ export default function Problem1() {
             </div>
 
             <motion.div ref={target} className="carusel">
-                <motion.div drag="x" dragConstraints={{right: 0}} className="inner-carusel">
+                <motion.div drag="x" dragConstraints={{right: 0, left: -3450}} className="inner-carusel">
                     {
                         data.map((item) => {
                             return (

@@ -8,12 +8,22 @@ import Problem3 from './Problem3.jsx';
 import Problem4 from './Problem4.jsx';
 import BlankProblem from './BlankProblem.jsx';
 
-import { motion } from 'framer-motion'
-import { useState } from 'react';
+import { motion, useTransform, useScroll } from 'framer-motion'
+import { useRef, useState } from 'react';
 
 export default function List() {
 
     const [problem, setProblem] = useState(10);
+    
+    const targetRef = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["start end", "end start"],
+    })
+
+    const scrollOpacity = useTransform(scrollYProgress, 
+        [-1, 0, 0.2, 0.3, 0.5, 0.65, 0.68, 0.7, 0.8, 1],
+        [1, 1, 1, 1, 1, 1, 0, 0, 0, 0])
 
     const fadeInAnimationVariants = {
         initial: {
@@ -29,6 +39,7 @@ export default function List() {
             }
         }),
     }
+
 
     function handleClick(index) {
         setProblem(index)
@@ -61,9 +72,19 @@ export default function List() {
                     <BlankProblem />
                 }
 
+                
+
                 {
                     (problem != 10) &&
-                        <div className="hero-container">  
+                        <div className="hero-container">
+                            <motion.div 
+                            ref={targetRef}
+                            style={{opacity: scrollOpacity}}
+                            className="scrolldown">
+                                <p>Scroll down!</p>
+                                <img src='./scrolldown.png' />
+                            </motion.div>
+
                             {problem === 0 && <Problem1 />}
                             {problem === 1 && <Problem2 />}
                             {problem === 2 && <Problem3 />}

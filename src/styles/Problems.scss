@@ -37,6 +37,7 @@
             transform: scale(110%);
             background-color: rgba(227, 119, 248, 0.616);
         }
+
     }
 
     .blank {
@@ -45,6 +46,20 @@
 
 
 
+}
+
+@keyframes scrolldown-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 .hero-container {
@@ -58,6 +73,22 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 100px;
+
+    .scrolldown {
+        position: relative;
+        top: -170px;
+        right: -40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-name: scrolldown-animation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.1s;
+        img {
+            width: 50px;
+        }
+    }
 
     .titlu {
         font-size: 2.2em;
