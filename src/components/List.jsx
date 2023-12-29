@@ -32,11 +32,6 @@ export default function List() {
 
     function handleClick(index) {
         setProblem(index)
-        if (problem != 10) 
-        {
-            const el = document.querySelector(".App")
-            
-        }
     } 
 
     return (
