@@ -44,6 +44,32 @@ export default function Problem1() {
                     }
                 </motion.div>
             </motion.div>
+
+            <div className="algoritm">
+                
+
+                <div className="algoritm1">
+                    <div className="rezolvare1">
+                        <p>#include &lt;fstream&gt;</p>
+                        <p>#include &lt;iostream&gt;</p>
+                        <p>#include &lt;climits&gt;</p>
+                        <p>using namespace std;</p>
+                        <br></br>
+                        <p>ifstream f;</p>
+                        <p>ofstream g;</p>
+                        <br></br>
+                        <p>int i, j, n, m, Min1;</p>
+                        <p>int a[305][305], cost[305][305], Min[305];</p>
+                        <br></br>
+                        <p>// initializezi minimu cu cea mai mare valoare</p>
+                        <p>void init()</p>
+                    </div>
+
+                    <div className="explicare1">
+
+                    </div>
+                </div>
+            </div>
         </>
     )
 }

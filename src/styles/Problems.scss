@@ -1,3 +1,22 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+:root {
+    --clr-1: rgb(32, 32, 32);
+    --clr-2: #052b2f;
+    --clr-3: #0e4b50;
+    --clr-4: #2d8f85;
+    --clr-5: #637c54;
+}
+
 .prob {
 
     display: flex;
@@ -63,7 +82,7 @@
 }
 
 .hero-container {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     position: absolute;
     top: 1700px;
@@ -113,6 +132,51 @@
                 }
             }
         }
+    }
+
+    .algoritm {
+        position: relative;
+        top: 100px;
+
+        .algoritm1 {
+
+
+            .rezolvare1 {
+                width: 40vw;
+                height: 500px;
+                background-color: rgb(32, 32, 32);
+                border-radius: 14px;
+                line-height: 10px;
+            }
+            
+            .rezolvare1::before,
+            .rezolvare1::after {
+                content: "";
+                position: absolute;
+                inset: -.5rem;
+                z-index: -1;
+                background: conic-gradient(
+                    from var(--gradient-angle),
+                    var(--clr-3),
+                    var(--clr-4),
+                    var(--clr-5),
+                    var(--clr-4),
+                    var(--clr-3),
+                );
+                border-radius: inherit;
+                animation: rotation 20s linear infinite;
+            }
+
+            .rezolvare1::after {
+                filter: blur(3.5rem);
+            }
+
+            .explicare1 {
+
+            }
+        }
+            
+        
     }
 
 }
