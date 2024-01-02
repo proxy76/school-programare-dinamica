@@ -82,7 +82,7 @@
 }
 
 .hero-container {
-    height: 200vh;
+    height: 550vh;
     width: 100%;
     position: absolute;
     top: 1700px;
@@ -139,39 +139,41 @@
         top: 100px;
 
         .algoritm1 {
-
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 50px;
 
             .rezolvare1 {
-                width: 40vw;
-                height: 500px;
+                width: 45vw;
+                height: 550px;
                 background-color: rgb(32, 32, 32);
                 border-radius: 14px;
-                line-height: 10px;
+                
+                
+
+                .rezolvare1--text {
+                    font-family: 'Consolas';
+                    line-height: 10px;
+                    margin: 30px;
+                }
             }
             
-            .rezolvare1::before,
-            .rezolvare1::after {
-                content: "";
-                position: absolute;
-                inset: -.5rem;
-                z-index: -1;
-                background: conic-gradient(
-                    from var(--gradient-angle),
-                    var(--clr-3),
-                    var(--clr-4),
-                    var(--clr-5),
-                    var(--clr-4),
-                    var(--clr-3),
-                );
-                border-radius: inherit;
-                animation: rotation 20s linear infinite;
-            }
-
-            .rezolvare1::after {
-                filter: blur(3.5rem);
-            }
 
             .explicare1 {
+                width: 45vw;
+                height: 550px;
+                background-color: rgba(255, 255, 255, 0.5);
+                border-radius: 14px;
+                
+                
+                .explicare1--text {
+                    font-size: 1.7rem;
+                    padding-top: 15px;
+                    padding-left: 20px;
+                }
 
             }
         }
