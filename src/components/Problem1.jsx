@@ -14,6 +14,9 @@ export default function Problem1() {
         setWidth(target.current.offsetWidth)
     }, [])
 
+    let leftLimit = 0;
+    if (window.innerWidth == 1707) leftLimit = -3450
+
     return(
         <>
             <div className="titlu">
@@ -21,7 +24,7 @@ export default function Problem1() {
             </div>
 
             <motion.div ref={target} className="carusel">
-                <motion.div drag="x" dragConstraints={{right: 0, left: -3450}} className="inner-carusel">
+                <motion.div drag="x" dragConstraints={{right: 0, left: leftLimit}} className="inner-carusel">
                     {
                         data.map((item) => {
                             return (
@@ -98,14 +101,14 @@ export default function Problem1() {
                             <br></br>
                             <p><span style={{color: "blue"}}>int</span> main()｛</p>
                             <p style={{marginLeft: 30}}>f.open("insula.in");</p>
-                            <p style={{marginLeft: 30}}>// se citeste cat costa pana in statia j cu transportatorul i</p>
+                            <p style={{marginLeft: 30, color: "gray"}}>// se citeste cat costa pana in statia j cu transportatorul i</p>
                             <p style={{marginLeft: 30}}>f &gt;&gt; n &gt;&gt; m;</p>
                             <p style={{marginLeft: 30}}>for (i = 1; i &lt;= m; ++i)</p>
                             <p style={{marginLeft: 60}}>for (j = 1; j &lt;= n; ++j)</p>
                             <p style={{marginLeft: 90}}>f &gt;&gt; cost[i][j+1];</p>
                             <p style={{marginLeft: 30}}>f.close();</p>
-                            <p style={{marginLeft: 30}}>// cost[i][j] - costul pentru a merge cu transportatorul i</p>
-                            <p style={{marginLeft: 30}}>// a[i][j] - costum minim pentru a ajunge la statia i cu transportatorul j</p>
+                            <p style={{marginLeft: 30, color: "gray"}}>// cost[i][j] - costul pentru a merge cu transportatorul i</p>
+                            <p style={{marginLeft: 30, color: "gray"}}>// a[i][j] - costum minim pentru a ajunge la statia i cu transportatorul j</p>
                         </div>
                     </div>
 
@@ -123,7 +126,7 @@ export default function Problem1() {
                         <div className="rezolvare1--text">
                             <p style={{marginLeft: 30, color: "gray"}}>// trece stanga-dreapta</p>
                             <p style={{marginLeft: 30}}>init();</p>
-                            <p style={{marginLeft: 30, color: "gray"}}>// minimul pentru a ajunge din statia 1-2 de forrma a[statia 2][transp]</p>
+                            <p style={{marginLeft: 30, color: "gray"}}>// minimul pentru a ajunge din statia 1-2 de forma a[statia 2][transp]</p>
                             <p style={{marginLeft: 30}}>for (i = 1; i &lt; m; i++)｛</p>
                             <p style={{marginLeft: 60}}>if (i == 1) a[2][i] = cost[i][2];</p>
                             <p style={{marginLeft: 60}}>else a[2][i] = cost[i][2] * 2;</p>
@@ -149,7 +152,6 @@ export default function Problem1() {
                             <p style={{marginLeft: 30, color: "gray"}}>// minimul sa ajunga la statia 1 din nou</p>
                             <p style={{marginLeft: 30}}>for (i = 3; i &lt;= n + 1; ++i)｛</p>
                             <p style={{marginLeft: 60}}>for (j = 1; j &lt;= m; ++j)｛</p>
-                            <p style={{marginLeft: 90, lineHeight: 1.2, color: "gray"}}>// a[i-1][j]-minim sa ajunga la statia i-1 prin trasnp j, cost[j][i]-costul sa ajunga la statia j prin transp 1; Min[i-1]-minimul sa ajunga in statia i-1</p>
                             <p style={{marginLeft: 90, lineHeight: 1.2}}>a[i][j] = minim(a[i - 1][j] + cost[j][i], Min[i - 1] + 2 * cost[j][i]);</p>
                             <p style={{marginLeft: 90}}>Min[i] = minim(Min[i], a[i][j]);</p>
                             <p style={{marginLeft: 60}}>｝</p>
@@ -208,7 +210,7 @@ export default function Problem1() {
                             <p style={{marginLeft: 30}}>｝</p>
                             <br></br>
                             <p style={{marginLeft: 30}}><span style={{color: "green"}}>ofstream</span> g("insula.out");</p>
-                            <p style={{marginLeft: 30}}>// afla minim intre cele doua trasee</p>
+                            <p style={{marginLeft: 30, color: "gray"}}>// afla minim intre cele doua trasee</p>
                             <p style={{marginLeft: 30}}>g &lt;&lt; minim(Min1, Min[1]) &lt;&lt; " ";</p>
                             <p style={{marginLeft: 30}}>g.close();</p>
                             <p style={{marginLeft: 30}}><span style={{color: "red"}}>return</span> 0;</p>
