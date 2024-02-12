@@ -14,9 +14,6 @@ export default function Problem1() {
         setWidth(target.current.offsetWidth)
     }, [])
 
-    let leftLimit = 0;
-    if (window.innerWidth == 1707) leftLimit = -3450
-
     return(
         <>
             <div className="titlu">
@@ -24,7 +21,7 @@ export default function Problem1() {
             </div>
 
             <motion.div ref={target} className="carusel">
-                <motion.div drag="x" dragConstraints={{right: 0, left: leftLimit}} className="inner-carusel">
+                <motion.div drag="x" dragConstraints={{right: 0, left: -3450}} className="inner-carusel">
                     {
                         data.map((item) => {
                             return (
