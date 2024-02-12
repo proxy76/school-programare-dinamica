@@ -221,7 +221,14 @@ export default function Problem1() {
                         </div>
                     </div>
                 </div>
+                
             </div>
+            <div className="gifuri">
+                <img src='./Explicatie.gif' className='sens-ceas'></img>
+                <img src='./Explicatie_trig.gif' className='sens-trig'></img>
+            </div>
+
+            
         </>
     )
 }

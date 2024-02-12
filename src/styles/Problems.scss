@@ -177,8 +177,27 @@
 
             }
         }
-            
         
+        
+        
+    }
+
+    .gifuri {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        gap: 20px;
+        position: relative;
+        top: 200px;
+        .sens-ceas {
+            width: 60%;
+            height: 60%;
+        }
+        .sens-trig {
+            width: 60%;
+            height: 60%;
+        }
     }
 
 }
