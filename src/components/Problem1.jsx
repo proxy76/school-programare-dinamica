@@ -21,7 +21,7 @@ export default function Problem1() {
             </div>
 
             <motion.div ref={target} className="carusel">
-                <motion.div drag="x" dragConstraints={{right: 0, left: -3450}} className="inner-carusel">
+                <motion.div drag="x" dragConstraints={{right: 0, left: -window.innerWidth - 1743}} className="inner-carusel">
                     {
                         data.map((item) => {
                             return (
