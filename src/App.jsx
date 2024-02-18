@@ -4,6 +4,17 @@ import Problems from './components/Problems';
 
 import './App.css'
 import { useState } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+const MainPage = () => {
+  return (
+    <div className="App">
+      <Header />
+      <MainTitle />
+      <Problems />
+    </div>
+  )
+}
 
 function App() {
 
@@ -15,10 +26,8 @@ function App() {
   })
 
   return (
-    <div className="App">
-     <Header />
-     <MainTitle />
-     <Problems />
+    <div>
+      <MainPage />
     </div>
   )
 }

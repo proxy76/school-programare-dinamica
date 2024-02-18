@@ -17,6 +17,24 @@
     --clr-5: #637c54;
 }
 
+.btn {
+    background-color: rgba(130, 189, 251, 0.61);
+    font-size: 1.4em;
+    padding: 20px;
+    margin: 10px;
+    margin-top: 100px;
+    border-radius: 14px;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: .25s;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(110%);
+    background-color: rgba(227, 119, 248, 0.616);
+}
+
 .prob {
 
     display: flex;

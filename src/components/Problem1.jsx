@@ -2,8 +2,10 @@ import '../styles/Problems.scss'
 
 import { motion } from 'framer-motion'
 import { useRef, useEffect, useState} from 'react'
+import { Link } from 'react-router-dom'
 
 import data from '../assets/pb1.jsx'
+import Ex from './Ex.jsx'
 
 export default function Problem1() {
 
@@ -13,6 +15,9 @@ export default function Problem1() {
     useEffect(() => {
         setWidth(target.current.offsetWidth)
     }, [])
+
+    const [pressed, setPressed] = useState(false)
+
 
     return(
         <>
@@ -44,6 +49,14 @@ export default function Problem1() {
                     }
                 </motion.div>
             </motion.div>
+
+            <div className="exercitiu">
+                <button className="btn" onClick={() => setPressed(!pressed)}>
+                    Verifică dacă ai înțeles exemplul!
+                </button>
+            </div>
+            
+           {pressed && <Ex />}
 
             <div className="algoritm">
                 
